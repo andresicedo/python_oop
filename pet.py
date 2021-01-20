@@ -28,6 +28,10 @@ class Pet:
         Fullness: %d
         Happiness: %d
         """ % (self.name, self.fullness, self.happiness) 
+    
+    def eat_treat(self, treat):
+        self.fullness += treat.yum
+        self.happiness += treat.joy
 
 class CuddlyPet(Pet):
     def __init__(self, name, fullness=50, hunger=5, cuddle_level=1):
